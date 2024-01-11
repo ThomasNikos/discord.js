@@ -1,0 +1,75 @@
+<title>Invalid Dashboard</title>
+<style>
+  body {
+   background-image: url("https://www.invalidin.cf/resources/bg.jpg");
+   background-color: #cccccc;
+  }
+  @font-face {
+    font-family: Invalid;
+    src: url("https://invalidin.cf/fonts/RocknRollOne-Regular.ttf");
+  }
+  p {
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  div {
+    font-family: Invalid;
+  }
+</style>
+<head>
+  <link rel="stylesheet" href="https://invalidin.cf/css/minireset.css">
+  <link rel="stylesheet" href="https://invalidin.cf/css/main.css">
+</head> 
+<body class="page-container">
+
+  <div class="page-wrapper">
+    <header>
+      <center><a href="http://144.91.86.8:2145/" class="brand">INVALID</a>
+    </header>
+    <div class="container">
+      <div class="section">
+        <div class="text">
+<%- include("partials/header.html", { bot, user, path, title: "Home" }) %>
+
+<% if (alert) { %>
+  <p><%= alert %></p><br>
+<% } %>
+
+<h1><%= guild.name %></h1>
+<form style="margin-top: 1em;" method="POST"> <!-- method="post" triggers a POST request to the same url with the body of the form control inputs -->
+  <h2>Prefix:</h2>
+  <input type="text" name="prefix" value="<%= settings.prefix %>" placeholder="Your prefix."><br>
+  <button class="btn" type="submit">Save Settings</button>
+</form>
+<form style="margin-top: 2em;" method="POST"> <!-- method="post" triggers a POST request to the same url with the body of the form control inputs -->
+  <h2>Dark Chat:</h2>
+  <input type="text" name="dark" value="<%= settings.dark %>" placeholder="Dark Channel Name."><br>
+  <button class="btn" type="submit">Save Settings</button>
+</form>
+<form style="margin-top: 2em;" method="POST"> <!-- method="post" triggers a POST request to the same url with the body of the form control inputs -->
+  <h2>Instagram Chat:</h2>
+  <input type="text" name="insta" value="<%= settings.insta %>" placeholder="Instagram Channel Name."><br>
+  <button class="btn" type="submit">Save Settings</button>
+</form>
+<form style="margin-top: 2em;" method="POST"> <!-- method="post" triggers a POST request to the same url with the body of the form control inputs -->
+  <h2>Polls Chat:</h2>
+  <input type="text" name="polls" value="<%= settings.polls %>" placeholder="Polls Channel Name."><br>
+  <button class="btn" type="submit">Save Settings</button>
+</form>
+<form style="margin-top: 2em;" method="POST"> <!-- method="post" triggers a POST request to the same url with the body of the form control inputs -->
+  <h2>Suggestions Chat:</h2>
+  <input type="text" name="suggestions" value="<%= settings.suggestions %>" placeholder="Suggestions Channel Name."><br>
+  <button class="btn" type="submit">Save Settings</button>
+</form>
+<form style="margin-top: 2em;" method="POST"> <!-- method="post" triggers a POST request to the same url with the body of the form control inputs -->
+  <h2>Vehicle-Suggestions Chat:</h2>
+  <input type="text" name="vehiclesuggest" value="<%= settings.vehiclesuggest %>" placeholder="Vehicel-Suggestions Channel Name."><br>
+  <button class="btn" type="submit">Save Settings</button>
+</form>
+</div>
+</div>
+</div>
+
+<%- include("partials/footer.html") %>

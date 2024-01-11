@@ -1,0 +1,19 @@
+{
+    "bot": {
+      "id": "",
+      "secret": "",
+      "token": ""
+    },
+    "dashboardURL": "",
+    "mongoURI": "",
+    "prefix": "!",
+    "JOINTOCREATECHANNEL": "806956364097126460",
+    "CHANNEL": "713445761727201292",
+    "SERVER": "713445369438011452",
+    "STATUS": "With Invalid",
+    "LIVE": "https://www.youtube.com/watch?v=gnyW6uaUgk4",
+    "clockchannel": "815225930326867969", 
+    "timezone": "Europe/Athens",
+    "format": "HH:mm (z)", 
+    "updateinterval": 600000 
+  }

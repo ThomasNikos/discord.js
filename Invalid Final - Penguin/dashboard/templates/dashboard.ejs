@@ -1,0 +1,56 @@
+<html>
+<style>
+    body {
+     background-image: url("https://www.invalidin.cf/resources/bg.jpg");
+     background-color: #cccccc;
+    }
+    @font-face {
+      font-family: Invalid;
+      src: url("https://invalidin.cf/fonts/RocknRollOne-Regular.ttf");
+    }
+    p {
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    div {
+      font-family: Invalid;
+    }
+</style>
+<head>
+    <link rel="stylesheet" href="https://invalidin.cf/css/minireset.css">
+    <link rel="stylesheet" href="https://invalidin.cf/css/main.css">
+</head>
+<body class="page-container">
+
+  <div class="page-wrapper">
+    <header>
+      <center><a href="./index.html" class="brand">INVALID</a>
+      </header>
+      <div class="container">
+        <div class="section">
+          <div class="text">
+<%- include("partials/header.html", { bot, user, path, title: "Invalid Dashboard" }) %>
+
+<% user.guilds.forEach(guild => {
+    const permsOnGuild = new perms(guild.permissions);
+    if(!permsOnGuild.has("MANAGE_GUILD")) return;
+  %>
+  <h2><%= guild.name %></h2>
+  <% if (bot.guilds.cache.get(guild.id)) { %>
+    <a href="/dashboard/<%= guild.id %>">
+        <button class="btn">
+          Edit Settings
+        </button>
+      </a>   
+      <p>⠀</p>
+ 
+  <% } else { %>
+    <a href="<%= `https://discordapp.com/oauth2/authorize?client_id=${bot.user.id}&scope=bot&guild_id=${guild.id}&response_type=code&redirect_uri=${encodeURIComponent(`${bot.config.domain}${bot.config.port == 80 ? "" : `:${bot.config.port}`}/callback`)}` %>">Add Bot</a>
+  <% } %>
+  <% }); %>
+</div>
+</div>
+</div>
+<%- include("partials/footer.html") %>

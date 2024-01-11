@@ -1,0 +1,12 @@
+`config.json`:
+```json
+{
+  "bot": {
+    "id": "806944337052696606",
+    "secret": "TWqUmYpnOicVRVsD01S1C9EEnB8HVDub",
+    "token": "ODA2OTQ0MzM3MDUyNjk2NjA2.YBwzeg.dSyp4KX5gORKL1YnorZyb3XfiVM"
+  },
+  "dashboardURL": "http://144.91.86.8:2145/",
+  "mongoURI": "mongodb+srv://Invalid:paparas2003@cluster0.giq5x.mongodb.net/Invalid"
+}
+```

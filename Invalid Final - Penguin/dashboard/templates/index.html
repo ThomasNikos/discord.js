@@ -1,0 +1,49 @@
+<html><title>Invalid</title>
+<style>
+    body {
+     background-image: url("https://www.invalidin.cf/resources/bg.jpg");
+     background-color: #cccccc;
+    }
+    @font-face {
+      font-family: Invalid;
+      src: url("https://invalidin.cf/fonts/RocknRollOne-Regular.ttf");
+    }
+    p {
+      font-size: 20px;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    div {
+      font-family: Invalid;
+    }
+</style>
+<head>
+    <link rel="stylesheet" href="https://invalidin.cf/css/minireset.css">
+    <link rel="stylesheet" href="https://invalidin.cf/css/main.css">
+</head>
+<body class="page-container">
+
+    <div class="page-wrapper">
+      <header>
+        <center><a href="./index.html" class="brand">INVALID</a>
+      </header>
+      <div class="container">
+        <div class="section">
+          <div class="text">
+
+    <%- include("partials/header.html", { bot, user, path, title: "Home" }) %>
+    <a href="/dashboard" target="_blank" rel="noopener noreferrer">
+        <button class="btn">
+          Go to Dashboard
+        </button>
+      </a>   
+    </div>
+</div>
+</div>
+</div>
+    <%- include("partials/footer.html") %>
+    
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+.jumbotron {
+  margin-top: 25vh;
+}
+body {
+  background-color: black;
+  background-image: url("bg.jpg");
+}
